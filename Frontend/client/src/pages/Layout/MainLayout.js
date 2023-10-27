@@ -5,16 +5,13 @@ import Footer from "../../components/Footer/Footer";
 import { MainContext } from "../../context/MainContext";
 
 function MainLayout() {
-  const { openCart, ref } = useContext(MainContext);
+  const { openCart } = useContext(MainContext);
   const location = useLocation();
   useEffect(() => {
-    const element = ref.current;
-    if (element) {
-      element.scrollIntoView();
-    }
+    window.scrollTo(0, 0);
   }, [location.pathname]);
   return (
-    <div  className={`${openCart && "h-screen overflow-hidden"}`}>
+    <div className={`${openCart && "h-screen overflow-hidden"}`}>
       <NavBar />
       <Outlet />
       <Footer />

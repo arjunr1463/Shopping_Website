@@ -106,7 +106,7 @@ function Market() {
                 key={index}
                 className="cursor-pointer flex flex-col h-full bg-white shadow-md rounded-[5px] border-[1px]  "
               >
-                <div className="border-b-[1px] border-[#DFDFDF] relative">
+                <div className="border-b-[1px] flex items-center justify-center  border-[#DFDFDF] relative">
                   <img
                     src={item.image[0]}
                     alt={item.title}
@@ -117,7 +117,7 @@ function Market() {
                   </i>
                 </div>
                 <div className="flex flex-col gap-[3px] text-[14px] md:text-[16px] p-2 pb-2.5 relative">
-                  <h3 className="font-poppins">{item.name.slice(0, 28)}</h3>
+                  <h3 className="font-poppins ">{item.name.slice(0, 28)}</h3>
                   <div className="flex gap-3 items-end">
                     <span className="font-mont font-semibold text-[13px] text-gray-500 relative ">
                       Rs {item.actualPrice}

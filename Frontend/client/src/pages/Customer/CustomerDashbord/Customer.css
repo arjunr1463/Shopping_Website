@@ -1,0 +1,80 @@
+.truck-container {
+  position: relative;
+}
+
+.truck {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-300%, -50%);
+  transition: transform 5s linear, opacity 5s ease-in-out;
+}
+
+.truck-move {
+  animation: truckAnimation 5s linear forwards;
+}
+
+@keyframes truckAnimation {
+  0% {
+    transform: translateX(-300%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(440%) translateY(-50%);
+  }
+}
+
+.truck-icon {
+  font-size: 35px;
+}
+
+.order-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  animation: orderTextAnimation 2s linear forwards;
+}
+
+.order-letter {
+  opacity: 0;
+  animation: letterAnimation 2s linear forwards;
+}
+
+@keyframes orderTextAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes letterAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.letter-animation {
+  animation: letterAnimation 1s linear forwards;
+}
+
+@keyframes letterAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
